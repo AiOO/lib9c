@@ -21,12 +21,6 @@ namespace Lib9c.Model.Order
             return Addresses.Shop.Derive(orderId.ToString());
         }
 
-        public enum OrderType
-        {
-            Fungible,
-            NonFungible,
-        }
-
         public abstract OrderType Type { get; }
         public Address SellerAgentAddress { get; }
         public Address SellerAvatarAddress { get; }

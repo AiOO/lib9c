@@ -64,7 +64,7 @@ namespace Lib9c.Model.Order
 
         public static Order Deserialize(Dictionary dictionary)
         {
-            return dictionary[OrderTypeKey].ToEnum<Order.OrderType>().Equals(Order.OrderType.Fungible)
+            return dictionary[OrderTypeKey].ToEnum<OrderType>().Equals(OrderType.Fungible)
                 ? (Order) new FungibleOrder(dictionary)
                 : new NonFungibleOrder(dictionary);
         }
